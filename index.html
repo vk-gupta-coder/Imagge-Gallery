@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="title">🌟 <u>My Image Gallery</u></h1>
+
+  <!-- Search -->
+  <input type="text" id="searchInput" placeholder="🔍 Search images..." onkeyup="searchImages()" />
+
+  <!-- Filter Buttons -->
+  <div class="filter-btns">
+    <button class="active" onclick="filterImages('all', this)">All</button>
+    <button onclick="filterImages('nature', this)">Nature</button>
+    <button onclick="filterImages('city', this)">City</button>
+    <button onclick="filterImages('animal', this)">Animal</button>
+  </div>
+
+  <!-- Image Gallery -->
+  <div class="gallery">
+     <div class="image-card animal">
+      <img src="images/animal1.jpg" alt="Wild Deers" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal2.jpg" alt="deer" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal3.jpg" alt="Mule Deer" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal4.jpg" alt="Creative Animal" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal5.jpg" alt="Monkey" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal6.jpg" alt="Red Howler Monkey" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal7.jpg" alt="Jaguar" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal8.jpg" alt="Tigers" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal9.jpg" alt="Elephant" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card animal">
+      <img src="images/animal10.jpg" alt="leapard" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city1.jpg" alt="Varansi" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city2.jpg" alt="South Korea(Seoul)" onclick="openLightbox(this)" />
+    <</div>
+    <div class="image-card city">
+      <img src="images/city3.jpg" alt="Jaipur" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city4.jpg" alt="Rishikesh" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city5.jpg" alt="Udaipur" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city6.jpg" alt="Brazil(Rio de Janeiro)" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city7.jpg" alt="Gurugram" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city8.jpg" alt="Agra" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city9.jpg" alt="Mumbai" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card city">
+      <img src="images/city10.jpg" alt="Mumbai" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature1.jpg" alt="Mountains-Path-hill-Spring" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature2.jpg" alt="Natural Ambiance" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature3.jpg" alt="Mountainous Landscape" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature4.jpg" alt="Sunset" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature5.jpg" alt="Lake Molveno" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature6.jpg" alt="Waterfalls" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature7.jpg" alt="Prominent Waterfall" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature8.jpg" alt="Mount Fuji" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature9.jpg" alt="Moraine Lake" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature10.jpg" alt="Mount Fuji" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature11.jpg" alt="Beautiful Spring Landscape" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature12.jpg" alt="Natural Beauty of Kerala" onclick="openLightbox(this)" />
+    </div>
+    <div class="image-card nature">
+      <img src="images/nature13.jpg" alt="Tiger Hill" onclick="openLightbox(this)" />
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" />
+    <div class="nav-btns">
+      <span onclick="prevImage()">&#10094;</span>
+      <span onclick="nextImage()">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
